@@ -55,9 +55,23 @@
                     <view key="view" contentMode="scaleToFill" id="vqd-Nu-Fle">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vTF-bA-n7F">
+                                <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="vTF-bA-n7F" secondAttribute="bottom" id="0b4-0E-hBh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vTF-bA-n7F" secondAttribute="trailing" constant="-16" id="Aiu-UP-ifi"/>
+                            <constraint firstItem="vTF-bA-n7F" firstAttribute="leading" secondItem="vqd-Nu-Fle" secondAttribute="leadingMargin" constant="-16" id="BSp-8s-loz"/>
+                            <constraint firstItem="vTF-bA-n7F" firstAttribute="top" secondItem="nOb-4H-2g2" secondAttribute="bottom" id="jkN-hd-HzR"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jFB-3X-iVN"/>
+                    <connections>
+                        <outlet property="imageview" destination="vTF-bA-n7F" id="Rz7-KC-UvD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e9W-dT-7R5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

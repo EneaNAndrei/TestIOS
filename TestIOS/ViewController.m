@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "AppDelegate.h"
+#import "SecondViewController.h"
 
 NSString *const JSONURLToDownloadString = @"https://s3-us-west-2.amazonaws.com/wirestorm/assets/response.json";
 
@@ -112,8 +113,10 @@ NSString *const JSONURLToDownloadString = @"https://s3-us-west-2.amazonaws.com/w
             if (image) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     UITableViewCell *updateCell = (id)[tableView cellForRowAtIndexPath:indexPath];
-                    if (updateCell)
+                    if (updateCell) {
                         updateCell.imageView.image = image;
+                        [updateCell setNeedsLayout];
+                    }
                 });
             }
         }
@@ -133,6 +136,17 @@ NSString *const JSONURLToDownloadString = @"https://s3-us-west-2.amazonaws.com/w
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self performSegueWithIdentifier:@"SecondViewControllerSegue" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"SecondViewControllerSegue"]) {
+        UITableViewCell *cell = (UITableViewCell *) sender;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+        NSDictionary *peopleObject =[self.peopleValues objectAtIndex:[indexPath row]];
+        NSLog(@"%@", peopleObject);
+        SecondViewController *secondVC = [segue destinationViewController];
+        secondVC.personObject = peopleObject;
+    }
 }
 
 

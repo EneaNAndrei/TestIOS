@@ -10,6 +10,7 @@
 
 @interface SecondViewController : UIViewController
 
-@property (nonatomic, strong) NSArray *allPeopleArray;
+@property (nonatomic, strong) NSDictionary *personObject;
+@property (weak, nonatomic) IBOutlet UIImageView *imageview;
 
 @end
