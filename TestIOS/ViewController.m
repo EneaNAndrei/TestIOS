@@ -105,9 +105,9 @@ NSString *const JSONURLToDownloadString = @"https://s3-us-west-2.amazonaws.com/w
     }
     
    
-    
+    __weak typeof(self) weakself = self; //i could reaaaally do better here....just pointless
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        NSData *imgData = [NSData dataWithContentsOfURL:[NSURL URLWithString:[[self.peopleValues objectAtIndex:indexPath.row] valueForKey:@"smallpicurl"]]];
+        NSData *imgData = [NSData dataWithContentsOfURL:[NSURL URLWithString:[[weakself.peopleValues objectAtIndex:indexPath.row] valueForKey:@"smallpicurl"]]];
         if (imgData) {
             UIImage *image = [UIImage imageWithData:imgData];
             if (image) {
