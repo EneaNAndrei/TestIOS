@@ -15,6 +15,7 @@
 		0410293C1B1F780E00265F34 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0410293B1B1F780E00265F34 /* Images.xcassets */; };
 		0410293F1B1F780E00265F34 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0410293D1B1F780E00265F34 /* LaunchScreen.xib */; };
 		0410294B1B1F780E00265F34 /* TestIOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0410294A1B1F780E00265F34 /* TestIOSTests.m */; };
+		041029561B1F851A00265F34 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041029551B1F851A00265F34 /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		041029441B1F780E00265F34 /* TestIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		041029491B1F780E00265F34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0410294A1B1F780E00265F34 /* TestIOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestIOSTests.m; sourceTree = "<group>"; };
+		041029541B1F851A00265F34 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		041029551B1F851A00265F34 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 				0410293D1B1F780E00265F34 /* LaunchScreen.xib */,
 				041029321B1F780E00265F34 /* TestIOS.xcdatamodeld */,
 				0410292B1B1F780E00265F34 /* Supporting Files */,
+				041029541B1F851A00265F34 /* SecondViewController.h */,
+				041029551B1F851A00265F34 /* SecondViewController.m */,
 			);
 			path = TestIOS;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				041029561B1F851A00265F34 /* SecondViewController.m in Sources */,
 				041029311B1F780E00265F34 /* AppDelegate.m in Sources */,
 				041029341B1F780E00265F34 /* TestIOS.xcdatamodeld in Sources */,
 				041029371B1F780E00265F34 /* ViewController.m in Sources */,
